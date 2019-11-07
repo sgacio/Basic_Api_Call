@@ -1,0 +1,49 @@
+.hide-one{
+    display: none;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input{
+    margin: 2rem 1rem 0rem 0rem;
+}
+
+.city{
+    font-size: 4rem;
+    text-decoration: underline;
+    text-align: center;
+    color: oldlace;
+}
+
+.weather-container{
+    display: flex;
+    justify-content: center;
+    margin-left: 15rem;
+}
+
+.location-container{
+    display: flex;
+    justify-content: center;
+}
+
+.forecast-container{
+    display: flex;
+    justify-content: center;
+}
+
+ul, li{
+    list-style: none;
+    color: oldlace;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 2rem;
+}
