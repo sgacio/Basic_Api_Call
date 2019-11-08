@@ -1,52 +1,74 @@
 <main>
-    <div class='input-container'>
-        <input class='input' type="text" [(ngModel)]="name" placeholder="City Name Here">
-        <button class='input' (click)="getWeatherAndTemp()">Search Weather!</button>
+  <form (ngSubmit)="getWeatherAndTemp()" class="input-container">
+    <input
+      name="input"
+      class="input"
+      type="text"
+      [(ngModel)]="name"
+      placeholder="City Name Here"
+    />
+    <button name="button" class="input">
+      Search Weather!
+    </button>
+  </form>
+  <header>
+    <h1 class="city">{{ information.name }}</h1>
+  </header>
+  <div class="weather-container">
+    <div class="location-container">
+      <ul>
+        <li>
+          <h3>Location Coordinates</h3>
+        </li>
+        <li>
+          <p>
+            Latitude : <span>{{ information.coord.lat }}</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            Longitude : <span>{{ information.coord.lon }}</span>
+          </p>
+        </li>
+      </ul>
     </div>
-    <header>
-        <h1 class='city'>{{information.name}}</h1>
-    </header>
-    <div class="weather-container">
-        <div class="location-container">
-            <ul>
-                <li>
-                    <h3>Location Coordinates</h3>
-                </li>
-                <li>
-                    <p>Latitude : <span>{{information.coord.lat}}</span></p>
-                </li>
-                <li>
-                    <p>Longitude : <span>{{information.coord.lon}}</span></p>
-                </li>    
-            </ul>
-        </div>
-        <div class="forecast-container">
-            <ul>
-                <li>
-                    <h3>Todays Forecast</h3>
-                </li>
-                <li>
-                    <p>Humidity : <span>{{information.main.humidity}} %</span></p>
-                </li>
-                <li>
-                    <p>Pressure : <span>{{information.main.pressure}}</span></p>
-                </li>
-                <li>
-                    <p>Description of Atmospheric Conditions : <span>{{information.weather[0].description}}</span></p>
-                </li>
-                <li>
-                    <p>Current Temperature : <span>{{information.main.temp}}</span></p>
-                </li>
-                <li>
-                    <p>Maximum Temperature : <span>{{information.main.temp_max}}</span></p>
-                </li>
-                <li>
-                    <p>Minimum Temperature : <span>{{information.main.temp_min}}</span></p>
-                </li>
-            </ul>
-        </div>
+    <div class="forecast-container">
+      <ul>
+        <li>
+          <h3>Todays Forecast</h3>
+        </li>
+        <li>
+          <p>
+            Humidity : <span>{{ information.main.humidity }} %</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            Pressure : <span>{{ information.main.pressure }}</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            Description of Atmospheric Conditions :
+            <span>{{ information.weather[0].description }}</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            Current Temperature : <span>{{ information.main.temp }}</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            Maximum Temperature : <span>{{ information.main.temp_max }}</span>
+          </p>
+        </li>
+        <li>
+          <p>
+            Minimum Temperature : <span>{{ information.main.temp_min }}</span>
+          </p>
+        </li>
+      </ul>
     </div>
+  </div>
 </main>
-    
-    
- 
